@@ -233,8 +233,8 @@ check_fsl_flags <- function(.dataset,
   if (!uuid %in% names(.dataset)) stop("uuid argument incorrect, or not available in the dataset")
 
   # combine all fcs_columns together
-  fcs_flag_columns <- c("fsl_fcs_cereal","fsl_fcs_legumes","fsl_fcs_dairy","fsl_fcs_meat",
-                        "fsl_fcs_veg","fsl_fcs_fruit","fsl_fcs_oil","fsl_fcs_sugar","fsl_fcs_score")
+  fcs_flag_columns <- c(fsl_fcs_cereal,fsl_fcs_legumes,fsl_fcs_dairy,fsl_fcs_meat,
+                        fsl_fcs_veg,fsl_fcs_fruit,fsl_fcs_oil,fsl_fcs_sugar,fsl_fcs_score)
 
 
   if(length(setdiff(length(fcs_flag_columns),9)) != 0) {
