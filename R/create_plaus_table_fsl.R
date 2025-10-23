@@ -14,11 +14,11 @@ create_plaus_table_fsl <- function(.flextable) {
   .flextable <- flextable::merge_at(.flextable, i = 13:22, j = 9)
   .flextable <- flextable::merge_at(.flextable, i = 23:24, j = 9)
   .flextable <- flextable::merge_at(.flextable, i = 25:34, j = 9)
-  .flextable <- flextable::merge_at(.flextable, i = 35:46, j = 9)
-  .flextable <- flextable::merge_at(.flextable, i = 47, j = 4:5)
-  .flextable <- flextable::merge_at(.flextable, i = 48, j = 4:5)
-  .flextable <- flextable::merge_at(.flextable, i = 47, j = 8:9)
-  .flextable <- flextable::merge_at(.flextable, i = 48, j = 8:9)
+  .flextable <- flextable::merge_at(.flextable, i = 35:44, j = 9)
+ # .flextable <- flextable::merge_at(.flextable, i = 47, j = 4:5)
+ # .flextable <- flextable::merge_at(.flextable, i = 48, j = 4:5)
+ # .flextable <- flextable::merge_at(.flextable, i = 47, j = 8:9)
+ # .flextable <- flextable::merge_at(.flextable, i = 48, j = 8:9)
 
   for (i in 1:36) {
     .flextable <- flextable::merge_at(.flextable, i = i, j = 2:3)
@@ -33,7 +33,7 @@ create_plaus_table_fsl <- function(.flextable) {
     .flextable <- flextable::merge_at(.flextable, i = i, j = 4:5)
   }
 
-  for (n in 1:46) {
+  for (n in 1:44) {
     k <- as.numeric(n + 1)
     if ((n %% 2) == 0) {
       next
@@ -43,7 +43,7 @@ create_plaus_table_fsl <- function(.flextable) {
     }
   }
 
-  for (i in 43:48) {
+  for (i in 43:44) {
     .flextable <- flextable::merge_at(.flextable, i = i, j = 2:3)
     .flextable <- flextable::merge_at(.flextable, i = i, j = 4:5)
     .flextable <- flextable::merge_at(.flextable, i = i, j = 6:7)
@@ -133,27 +133,27 @@ create_plaus_table_fsl <- function(.flextable) {
     flextable::surround(i = 35, j = 1:9, border.top = flextable::fp_border_default(color= "black",
                                                                                    style = "solid",
                                                                                    width = 3)) %>%
-    flextable::surround(i = 46, j = 1:9, border.bottom = flextable::fp_border_default(color= "black",
+    #flextable::surround(i = 46, j = 1:9, border.bottom = flextable::fp_border_default(color= "black",
+    #                                                                                  style = "solid",
+    #                                                                                  width = 3)) %>%
+    flextable::surround(i = 35:44, j = 1, border.left  = flextable::fp_border_default(color= "black",
                                                                                       style = "solid",
                                                                                       width = 3)) %>%
-    flextable::surround(i = 35:46, j = 1, border.left  = flextable::fp_border_default(color= "black",
-                                                                                      style = "solid",
-                                                                                      width = 3)) %>%
-    flextable::surround(i = 35:46, j = 9, border.right  = flextable::fp_border_default(color= "black",
+    flextable::surround(i = 35:44, j = 9, border.right  = flextable::fp_border_default(color= "black",
                                                                                        style = "solid",
                                                                                        width = 3)) %>%
-    flextable::surround(i = 47, j = 1:9, border.top = flextable::fp_border_default(color= "black",
-                                                                                   style = "solid",
-                                                                                   width = 3)) %>%
-    flextable::surround(i = 48, j = 1:9, border.bottom = flextable::fp_border_default(color= "black",
-                                                                                      style = "solid",
-                                                                                      width = 3)) %>%
-    flextable::surround(i = 47:48, j = 8, border.right  = flextable::fp_border_default(color= "black",
-                                                                                       style = "solid",
-                                                                                       width = 3)) %>%
-    flextable::surround(i = 47:48, j = 1, border.left  = flextable::fp_border_default(color= "black",
-                                                                                      style = "solid",
-                                                                                      width = 3)) %>%
+    #flextable::surround(i = 47, j = 1:9, border.top = flextable::fp_border_default(color= "black",
+    #                                                                               style = "solid",
+    #                                                                               width = 3)) %>%
+    #flextable::surround(i = 48, j = 1:9, border.bottom = flextable::fp_border_default(color= "black",
+    #                                                                                  style = "solid",
+    #                                                                                  width = 3)) %>%
+    #flextable::surround(i = 47:48, j = 8, border.right  = flextable::fp_border_default(color= "black",
+    #                                                                                   style = "solid",
+    #                                                                                   width = 3)) %>%
+    #flextable::surround(i = 47:48, j = 1, border.left  = flextable::fp_border_default(color= "black",
+    #                                                                                  style = "solid",
+    #                                                                                  width = 3)) %>%
 
     flextable::bold(j = 1) %>%
     flextable::bold(j = "Score") %>%
